@@ -138,7 +138,7 @@ ol {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  border-bottom: 5px solid #1abc9c;
+  border-bottom: 5px solid  #FF8888;
   overflow: hidden;
 }
 
@@ -206,7 +206,7 @@ ol {
 .player .cover .inner .genre {
   position: absolute;
   top: 20px;
-  right: 20px;
+  margin-left: 10px;
   color: white;
   background-color: black;
   border-radius: 3px;
@@ -214,6 +214,19 @@ ol {
   padding: 5px 10px;
   z-index: 2;
 }
+
+.player .cover .inner .infor {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 5px 10px;
+  z-index: 2;
+}
+
 
 
 .player . {
@@ -242,8 +255,9 @@ ol {
 }
 
 .player .controls span {
-  font-size: 32px;
-  color: white;
+  font-size: 40px;
+  letter-spacing: 12px;
+  color: black;
   margin: auto;
   opacity: 1;
 }
@@ -278,7 +292,7 @@ ol {
   width: 1600px;
   -webkit-transform: translateX(-200px) translateY(0);
           transform: translateX(-200px) translateY(0);
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/main-wave.png");
+  background-image: url("http://www.pngmart.com/files/3/Sound-Wave-PNG-Transparent-Picture.png");
   background-repeat: no-repeat;
   background-position: bottom left;
   z-index: 4;
@@ -301,7 +315,7 @@ ol {
   width: 1600px;
   -webkit-transform: translateX(-200px) translateY(0);
           transform: translateX(-200px) translateY(0);
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/secundary-wave.png");
+  background-image: url("http://www.pngmart.com/files/3/Sound-Wave-PNG-Transparent-Picture.png");
   background-repeat: no-repeat;
   background-position: bottom left;
   z-index: 3;
@@ -341,9 +355,8 @@ ol {
 
 .player .info {
   width: 100%;
-  height: 100px;
   margin-top: 10px;
-  padding: 5px 20px;
+  padding: 5px 10px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -393,8 +406,17 @@ ol {
 }
 
 #track-list ul{
-  margin: 0;
-  padding:0 ;
+  margin: 1;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding: 10px 20px 0px 10px;
+  background-color: #f3f3f3;
+}
+
+#track-list a:link {
+  text-decoration: none;
 }
 
 .fa-backward{
@@ -408,11 +430,19 @@ ol {
 }
 
 .icon-right{
-    display: block;
-    text-align:center;
-    font-size: 24px;
-    color: #666666;
-    cursor:pointer;
+  position: absolute;
+  font-size: 24px;
+  color: #666666;
+  cursor:pointer;
+  margin-top: 10px;
+}
+
+.close{
+  left:10px;
+}
+
+.infor{
+  right:10px;
 }
 
 .right__panel .music__menu{
@@ -495,6 +525,18 @@ ol {
 }
 
 
+.playlist-header{
+  background-color: #FF8888;
+  height: 50px;
+}
+
+.playlist-header .title{
+  display: inline-block;
+  margin-top: 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .loaded{
     -webkit-transform:translateY(0px);
     transform:translateY(0px);
@@ -570,4 +612,10 @@ ol {
 }
 .phone-wrap .phone-1 .screen .status img {
   opacity: 0.3;
+}
+
+.more{
+  position: relative;
+  float: right;
+  margin-right: 5px;
 }

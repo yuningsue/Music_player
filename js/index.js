@@ -1,6 +1,6 @@
 $(document).ready(function(e) {
 
-	$('.icon-right').on('click', function() {
+	$('#track-list').on('click', function() {
 		$('.right__panel').toggleClass('display');
         $('.player').removeClass('display');
 	});
@@ -11,9 +11,18 @@ $(document).ready(function(e) {
 		$('.music__menu').removeClass('menu_list_open');
 	});
 
+    $('.infor').on('click', function() {
+        $('.player').toggleClass('display');
+    });
 
 });
 
+
+var clickcounter = 0;
+    $('.play').on('click', function(){
+
+        clickcounter++;
+    });
 
 function getInitialTracks(a) {
     SC.get("/tracks", {
@@ -22,7 +31,8 @@ function getInitialTracks(a) {
         trackAmount = r.length - 1, handleData(r[a])
         var tmp = '';
         for (var i = 0; i < r.length; i++) {
-          tmp = '<a href="' + r[i].permalink_url + '">' + r[i].title + '</a>';
+         tracknum.push(i);
+          tmp = '<a onclick="getTracks(tracknum[i])" href="#">' + r[i].title + '</a>' + '<div class=musicgenre></div>';
         $("<ul/>").html(tmp).appendTo("#track-list");
       }        
     })
@@ -56,10 +66,10 @@ function attachToPlayer(a) {
         "background-image": "url(" + a.waveform + ")"}), $(".description").html(a.description), $(".musicgenre").html(a.musicgenre)
 }
 function trackPlay() {
-    playing = !0, SC.player.play(), $(".controls").addClass("playing"), $(".waves").addClass("animate"), $("span.play").html('<i class="fa fa-pause" aria-hidden="true"></i>')
+    playing = !0, SC.player.play(), $(".controls").addClass("playing"), $(".waves").addClass("animate"), $("span.play").html('<i class="zmdi zmdi-pause"></i>')
 }
 function trackPause() {
-    playing = !1, SC.player.pause(), $(".controls").removeClass("playing"), $(".waves").removeClass("animate"), $("span.play").html('<i class="fa fa-play" aria-hidden="true"></i>')
+    playing = !1, SC.player.pause(), $(".controls").removeClass("playing"), $(".waves").removeClass("animate"), $("span.play").html('<i class="zmdi zmdi-play"></i>')
 }
 function trackResetTimer() {
     timer = 0, $(".wave-overlay").css({
@@ -87,6 +97,7 @@ var clientID = "nEUgbh6lRJ7mvPdBvWrL33FaKJJGtxFt",
     timer = 0,
     trackNumber = 0,
     trackAmount = null,
+    tracknum = [],
     interval = null;
 SC.initialize({
     client_id: clientID
