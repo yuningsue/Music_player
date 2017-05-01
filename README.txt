@@ -1,4 +1,4 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/MarioDesigns/pen/oYzdjG.
+The project is based on : http://codepen.io/MarioDesigns/pen/oYzdjG.
 
  First attempt on creating a Custom SoundCloud player using the soundcloud stream API. 
 
