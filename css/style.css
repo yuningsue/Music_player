@@ -445,6 +445,10 @@ ol {
   right:10px;
 }
 
+.info-page{
+  position: relative;
+}
+
 .right__panel .music__menu{
     width: 338px;
     height: 500px;
