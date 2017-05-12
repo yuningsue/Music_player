@@ -456,7 +456,6 @@ ol {
   height: 560px;
   position: relative;
   overflow-y: scroll;
-  opacity: 0;
 }
 
 .right__panel .music__menu{
