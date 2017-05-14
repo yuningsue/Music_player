@@ -131,9 +131,7 @@ ol {
   z-index: 1; 
 }
 
-.player-container{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
+
 
 .player .cover {
   width: 100%;
@@ -256,6 +254,10 @@ ol {
   z-index: 5;
 }
 
+.player .controls {
+  margin-left: 14px;
+}
+
 .player .controls span {
   font-size: 40px;
   letter-spacing: 12px;
@@ -266,6 +268,10 @@ ol {
 
 .player .controls span:hover {
   opacity: 0.4;
+}
+
+.player .controls .play {
+  font-size: 50px;
 }
 
 .player .controls.playing {
@@ -361,6 +367,7 @@ ol {
 
 .player .info {
   width: 100%;
+  height: 80px;
   margin-top: 10px;
   padding: 5px 10px;
   box-sizing: border-box;
@@ -455,7 +462,7 @@ ol {
   width: 338px;
   height: 560px;
   position: relative;
-  overflow-y: scroll;
+  overflow-y: scroll; 
 }
 
 .right__panel .music__menu{
