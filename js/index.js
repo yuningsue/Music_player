@@ -15,6 +15,11 @@ $(document).ready(function(e) {
         $('.player').toggleClass('display');
     });
 
+    $('.lyric-button').on('click', function() {
+        $('.cover').toggleClass('blur');
+        $('.lyrics').removeClass('display');
+    });
+
 
 });
 

@@ -156,6 +156,10 @@ ol {
   right: 0;
 }
 
+.player .cover  .blur{
+  filter: blur(2px);
+}
+
 .player .cover .inner {
   background-position: center;
   background-repeat: no-repeat;
@@ -448,6 +452,20 @@ ol {
   color: #666666;
   cursor:pointer;
   margin-top: 10px;
+}
+
+.player .cover .inner .lyric-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #e74c3c;
+  font-size: 16px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.player .cover .inner .lyric-button:hover {
+  color: #ed7669;
 }
 
 .close{
