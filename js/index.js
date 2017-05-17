@@ -17,7 +17,7 @@ $(document).ready(function(e) {
 
     $('.lyric-button').on('click', function() {
         $('.cover').toggleClass('blur');
-        $('.lyrics').removeClass('display');
+        $('.lyricsf').removeClass('display');
     });
 
 
@@ -69,7 +69,7 @@ function attachToPlayer(a) {
     }), $("<img/>").attr("src", a.cover).on("load", function() {
         $(".player").addClass("loaded"), $(".loading").addClass("closed"), $(".right__panel").addClass("loaded")
     }), $(".loved").html('<i class="fa fa-heart" aria-hidden="true"></i> ' + a.love), $(".user-avatar").html('<a href="' + a.userLink + '" target=_blank><img src="' + a.userAvatar + '" alt="' + a.userName + '"></a>'), $(".info").html('<p><a class="userName" href="' + a.userLink + '" target=_blank>' + a.userName + '</a></br><a class="trackName" href="' + a.link + '" target="_black">' + a.name + "</a></p>"), $(".wave-form").css({
-        "background-image": "url(" + a.waveform + ")"}), $(".description").html(a.description), $(".musicgenre").html(a.musicgenre)
+        "background-image": "url(" + a.waveform + ")"}), $(".userName").html(a.userName), $(".musicgenre").html(a.musicgenre)
 }
 function trackPlay() {
     playing = !0, SC.player.play(), $(".controls").addClass("playing"), $(".waves").addClass("animate"), $("span.play").html('<i class="zmdi zmdi-pause"></i>')
