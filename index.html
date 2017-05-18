@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/black-tie/jquery-ui.css">
 
       <link rel="stylesheet" href="css/style.css">
 
@@ -21,7 +22,7 @@
     <div class="screen">
       <div class="status"><img src="https://s3.postimg.org/syq19h45v/Status_Bar_Black_Lock_Clock.png" alt="status" width="94%"/></div>
 				<div class="loading"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
-					<div class="right__panel">
+					<div class="page right__panel">
 						<div class="music__menu">
 							<div class="row playlist-header">
 							<span class="title">My Playlist</span>
@@ -29,7 +30,7 @@
 							<div id="track-list"></div>
 						</div>
 					</div>
-					<div class="player shadow">
+					<div class="page player shadow">
 						<div class="player-container ">
 						<div class="row playlist-header">		
 							<span class="close icon-right"><i class="zmdi zmdi-chevron-left"></i></span>
@@ -39,6 +40,7 @@
 						<div class="cover-container">
 							<div class="cover">
 								<div class="inner">
+								  <div class="loved"><i class="fa fa-heart" aria-hidden="true"></i> 0</div>
 									<div class="waves"></div>
 								</div> <!-- end inner -->						
 							</div> <!-- end cover -->
@@ -57,19 +59,19 @@
 						</div>	
 						</div>
 					</div>
-						<div class="info-page">
+						<div class="page info-page">
 							<div class="row playlist-header">
 								<span class="close icon-right"><i class="zmdi zmdi-chevron-left"></i></span>
-								<span class="title">Get closer to the song</span>
+								<span class="title">Get closer</span>
 							</div>
 							<div id="song-status">
 								<div class="song">
-								<span class="user-avatar"></span><h3 class="userName"></h3>
-								<p>Composed by: xxx <br></p>
-							<!--	<div class="loved"><i class="fa fa-heart" aria-hidden="true"></i> 0</div>  -->
-								<h3>Genres: <span class="musicgenre"></span></h3><h3>Tag: #electronic #sad </h3>
-								<button><span class="like"><i class="fa fa-heart" aria-hidden="true"></i>Added to Playlist</span></button>
-								<button><span class="like"><i class="zmdi zmdi-download"></i>Pay to Download</span></button>
+								<h3>About this Song</h3>
+								<span class="user-avatar"></span> 
+								<p class="userName"></p>
+								<p>#electronics #sad #partymusic</p>
+								<button><span class="like"><i class="zmdi zmdi-check"></i> Added to Playlist</span></button>
+								<button><span class="like"><i class="zmdi zmdi-download"></i> Pay to Download</span></button>
 								<p>(You've listened this song for 5 times, pay to support this singer!)</p>
 								</div>
 								<div class="event">
@@ -87,6 +89,7 @@
 
 	</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://code.jquery.com/ui/1.11.4/jquery-ui.js'></script>
 <script src='https://connect.soundcloud.com/sdk/sdk-3.1.2.js'></script>
 
     <script src="js/index.js"></script>

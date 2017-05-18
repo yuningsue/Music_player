@@ -10,25 +10,25 @@ body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Calibri", Helvetica,Arial,sans-serif;
 }
 
 a,
 nav {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Calibri",Helvetica,Arial,sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family:"Calibri","Calibri", Helvetica,Arial,sans-serif;
 }
 
 p,
 li,
 ol {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Calibri",Helvetica,Arial,sans-serif;
 }
 
 
@@ -138,7 +138,7 @@ ol {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  border-bottom: 5px solid  #FF8888;
+  border-bottom: 5px solid  #cccccc;
   overflow: hidden;
 }
 
@@ -197,14 +197,16 @@ ol {
   position: absolute;
   top: 20px;
   left: 20px;
-  color: #e74c3c;
+  color: #fff;
+  background-color: rgba(0,0,0,0.3);
+  padding: 1px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 200;
   z-index: 2;
 }
 
 .player .cover .inner .loved:hover {
-  color: #ed7669;
+  color: #e6e6e6;
 }
 
 .player .cover .inner .genre {
@@ -477,6 +479,7 @@ ol {
 }
 
 .info-page{
+  background-color: #fff;
   width: 338px;
   height: 560px;
   position: relative;
@@ -564,7 +567,7 @@ ol {
 
 
 .playlist-header{
-  background-color: #FF8888;
+  background-color: #cccccc;
   height: 40px;
 }
 
@@ -658,53 +661,21 @@ ol {
   margin-right: 5px;
 }
 
-#section a {
-  padding-top: 0px;
+#song-status{
+  padding-top: 10px;
 }
 
-#section a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  margin-left: -12px;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
+.img-circle {
+    border-radius: 50%;
 }
 
-.section1 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.section1::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 80%;
-  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
-  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+button{
+  font-size: 12px;
+  background-color: #cccccc;
+  color:#000;
+  border-radius: 10%;
 }
 
-.demo a {
-  position: absolute;
-  left: 50%;
-  z-index: 2;
-  display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: #000;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
-  letter-spacing: .1em;
-  text-decoration: none;
-  transition: opacity .3s;
-}
-.demo a:hover {
-  opacity: .5;
+button:hover {
+    background: #e6e6e6;
 }
