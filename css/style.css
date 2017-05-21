@@ -262,6 +262,7 @@ ol {
 
 .player .controls {
   margin-left: 14px;
+  position: relative;
 }
 
 .player .controls span {
@@ -678,4 +679,14 @@ button{
 
 button:hover {
     background: #e6e6e6;
+}
+
+.controls-inner{
+  position: absolute;
+  margin-left: 100px;
+}
+
+.buy-message{
+  position: absolute;
+  z-index: 10;
 }

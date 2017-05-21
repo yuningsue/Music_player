@@ -22,12 +22,9 @@ $(document).ready(function(e) {
 
 });
 
-
-var clickcounter = 0;
-    $('.play').on('click', function(){
-
-        clickcounter++;
-    });
+function showMessage(){
+  $('.buy-message').removeClass('display');
+}
 
 function getInitialTracks(a) {
     SC.get("/tracks", {
@@ -106,7 +103,7 @@ var clientID = "nEUgbh6lRJ7mvPdBvWrL33FaKJJGtxFt",
     interval = null;
 SC.initialize({
     client_id: clientID
-}), getInitialTracks(trackNumber), $(".controls").on("click", function() {
+}), getInitialTracks(trackNumber), $(".play").on("click", function() {
     0 == playing ? trackPlay() : 1 == playing && trackPause()
 }), $(".next").on("click", function(a) {
     a.stopPropagation(), trackNext()
@@ -124,6 +121,6 @@ SC.initialize({
     1 == playing && (timer += 1e3);
     var a = 100 * timer / track.duration;
     $(".wave-overlay").css({
-        width: a + "%"
-    }), a >= 100 && trackNext()
+        width: a + "%" 
+    }), a >= 100 && trackNext() /*, a>= 10 && showMessage() */
 }, 1e3);
