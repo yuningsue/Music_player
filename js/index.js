@@ -16,9 +16,12 @@ $(document).ready(function(e) {
 
     $('.lyric-button').on('click', function() {
         $('.cover').toggleClass('blur');
-        $('.lyricsf').removeClass('display');
+        $('.lyrics').removeClass('display');
     });
 
+    $('.zmdi-close').on('click', function() {
+        $(".buy-message").fadeOut("slow");
+    });
 
 });
 

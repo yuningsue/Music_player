@@ -131,15 +131,19 @@ ol {
   z-index: 1; 
 }
 
-
+.player .cover-container{
+  height: 338px;
+  width: 338px;
+  position: relative;
+}
 
 .player .cover {
   width: 100%;
-  position: relative;
-  display: inline-block;
+  position: absolute;
   vertical-align: top;
   border-bottom: 5px solid  #cccccc;
   overflow: hidden;
+  z-index: 2;
 }
 
 .player .cover:before {
@@ -226,10 +230,9 @@ ol {
   top: 20px;
   right: 5px;
   color: white;
-  background-color: black;
-  border-radius: 3px;
+  padding: 1px;
+  background-color: rgba(0,0,0,0.3);
   font-size: 16px;
-  padding: 5px 10px;
   z-index: 2;
 }
 
@@ -261,7 +264,6 @@ ol {
 }
 
 .player .controls {
-  margin-left: 14px;
   position: relative;
 }
 
@@ -373,8 +375,8 @@ ol {
 }
 
 .player .info {
-  width: 100%;
-  height: 80px;
+  display: inline-flex;
+  height: 70px;
   margin-top: 10px;
   padding: 5px 10px;
   box-sizing: border-box;
@@ -457,22 +459,20 @@ ol {
   margin-top: 10px;
 }
 
-.player .cover .inner .lyric-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: #e74c3c;
-  font-size: 16px;
-  font-weight: 700;
-  z-index: 2;
+.player .lyrics {
+  z-index: 0;
 }
 
-.player .cover .inner .lyric-button:hover {
-  color: #ed7669;
-}
 
 .close{
-  left:10px;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  color: white;
+  padding: 1px;
+  background-color: rgba(0,0,0,0.3);
+  font-size: 16px;
+  z-index: 2;
 }
 
 .infor{
@@ -683,10 +683,31 @@ button:hover {
 
 .controls-inner{
   position: absolute;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 
 .buy-message{
   position: absolute;
   z-index: 10;
 }
+
+#info-wrap{
+  width: 100%;
+  height: 86px;
+  position: relative;
+}
+
+.zmdi-download{
+  display: inline-flex;
+}
+
+.info-icon{
+  top: 10px;
+  position: relative;
+}
+
+.info-icon span:hover {
+  opacity: 0.4;
+}
+
+
