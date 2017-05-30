@@ -24,13 +24,13 @@ $(document).ready(function(e) {
     });
 
     $('.zmdi-close').on('click', function() {
-        $(".buy-message").fadeOut("slow");
+        $(".buy-message-container").fadeOut("slow");
     });
 
 });
 
 function showMessage(){
-  $('.buy-message').removeClass('display');
+  $('.buy-message-container').removeClass('display');
 }
 
 function getInitialTracks(a) {

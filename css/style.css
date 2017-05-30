@@ -702,13 +702,15 @@ button:hover {
   z-index: 10;
   background-color: #e6e6e6;
   width: 233px;
-  margin-left: 50px;
-  padding:5px;
+  margin-left: 45px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 10px;
 }
 
 .buy-message h4{
   display: inline-block;
+  line-height: 1.2em;
 }
 
 #info-wrap{
@@ -736,6 +738,8 @@ button:hover {
 }
 
 .zmdi-close{
-  top:0;
-  right: 5px;
+  font-size:20px;
+  right: 46px;
+  top: -9px;
+  z-index: 12;
 }
