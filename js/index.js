@@ -10,6 +10,10 @@ $(document).ready(function(e) {
         $(".right__panel").fadeIn("slow");
 	});
 
+    $('.back').on('click', function() {
+        $(".player").fadeIn("slow");
+    });
+
     $('.infor').on('click', function() {
         $(".player"). hide("slide", { direction: "left" }, 300);
     });
